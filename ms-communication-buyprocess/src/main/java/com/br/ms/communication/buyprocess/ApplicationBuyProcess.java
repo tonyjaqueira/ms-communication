@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 
 @SpringBootApplication
-@EnableCircuitBreaker
+@EnableCircuitBreaker //anotação que Habilita o Cirvuit Breaker
 public class ApplicationBuyProcess {
 
 	public static void main(String[] args) throws InterruptedException {

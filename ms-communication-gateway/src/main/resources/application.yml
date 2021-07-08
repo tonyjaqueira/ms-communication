@@ -9,7 +9,7 @@ zuul:
   routes:
     index:
       sensitiveHeaders:
-      path: /comprar/**
+      path: /comprar/**  #toda vez q eu fizere uma rqusisição para comprar, o getway ira redirecionar para a uRL a baixo de um microservice
       url: http://127.0.0.1:8086/
     bridgekc:
       sensitiveHeaders:

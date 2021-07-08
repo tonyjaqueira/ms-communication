@@ -20,7 +20,7 @@ public class ListenerService {
 	@Autowired
 	private CompraRedisRepository compraRedisRepository;
 	
-	@RabbitListener(queues="${fila.finalizado}")
+	@RabbitListener(queues="${fila.finalizado}") //escutando a fila
     public void onMessage(Message message) throws JsonParseException, JsonMappingException, IOException  {
 		
 		String json = new String(message.getBody(), "UTF-8");

@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.br.ms.communication.bank.exceptions.PagamentoException;
 import com.br.ms.communication.bank.gateway.json.RetornoJson;
 
 @ControllerAdvice

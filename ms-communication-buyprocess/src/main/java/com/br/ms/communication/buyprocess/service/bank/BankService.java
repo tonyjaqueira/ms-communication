@@ -1,5 +1,9 @@
 package com.br.ms.communication.buyprocess.service.bank;
 
+/*
+ * Classe de comunicação entre microservices
+ */
+
 import java.io.IOException;
 
 import com.br.ms.communication.buyprocess.gateway.json.BankRetornoJson;

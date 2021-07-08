@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
-@EnableZuulProxy
+@EnableZuulProxy //habilitando o zull para fazer a rota
 public class ApplicationGateway {
 
     public static void main(String[] args) {

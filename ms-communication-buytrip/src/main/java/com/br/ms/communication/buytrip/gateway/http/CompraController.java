@@ -34,13 +34,13 @@ public class CompraController {
 
 		CompraChaveJson compraChaveJson = new CompraChaveJson();
 		compraChaveJson.setCompraJson(compraJson);
-		compraChaveJson.setChave(UUID.randomUUID().toString());
+		compraChaveJson.setChave(UUID.randomUUID().toString()); //criando um ID randomico
 
 		ObjectMapper obj = new ObjectMapper();
 
 		String json = obj.writeValueAsString(compraChaveJson);
 		
-		rabbitTemplate.convertAndSend(nomeFila, json);
+		rabbitTemplate.convertAndSend(nomeFila, json); //adicionando na fila o json recebido
 		
 		RetornoJson retorno = new RetornoJson();
 		retorno.setMensagem("Compra registrada com sucesso. Aguarda a confirmação do pagamento.");

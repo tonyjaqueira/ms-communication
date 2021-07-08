@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
 
 @SpringBootApplication
-@EnableRedisRepositories
+@EnableRedisRepositories //habilitando a conexão com o REDIS
 public class ApplicationBuyFeedback {
 
     public static void main(String[] args) throws InterruptedException {

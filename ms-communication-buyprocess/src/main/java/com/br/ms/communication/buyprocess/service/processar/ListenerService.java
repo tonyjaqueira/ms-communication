@@ -18,6 +18,10 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/*
+ * Classe responsável por fazer a comunicação entre filas
+ */
+
 @Service
 public class ListenerService {
 
@@ -33,8 +37,8 @@ public class ListenerService {
 	@Value("${fila.finalizado}")
 	private String nomeFilaFinalizado;
 
-	@HystrixCommand(fallbackMethod = "republicOnMessage")
-	@RabbitListener(queues="${fila.entrada}")
+	@HystrixCommand(fallbackMethod = "republicOnMessage") //método que vai ser executado em caso de erro.
+	@RabbitListener(queues="${fila.entrada}") //escutando a fila do Rabbit
     public void onMessage(Message message) throws JsonParseException, JsonMappingException, IOException  {
 		
 		String json = new String(message.getBody(), "UTF-8");
